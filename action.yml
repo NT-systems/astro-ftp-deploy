@@ -46,6 +46,10 @@ inputs:
     description:
     required: false
     default: false
+  timeout:
+    description: "Timeout value"
+    required: false
+    default: "60000"
 
 runs:
   using: composite
@@ -116,3 +120,4 @@ runs:
         server-dir: ${{ inputs.directory }}
         dry-run: ${{ inputs.dry-run }}
         local-dir: ./dist/
+        timeout:  ${{ inputs.timeout }}
